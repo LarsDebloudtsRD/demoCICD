@@ -1,19 +1,13 @@
 pipeline {
     agent any 
+    tools {
+        maven: 'Maven'
+        jdk: 'jdk11'
+    }
     stages {
-        stage('Build') {
+        stage('Stage 1') {
             steps {
-                echo 'building application' 
-            }
-        }
-        stage('Test') {
-            steps {
-                echo 'testing application'
-            }
-        }
-        stage('Deploy') {
-            steps {
-                echo 'deploying application'
+                echo 'Hello world!!!!!!!' 
             }
         }
     }
