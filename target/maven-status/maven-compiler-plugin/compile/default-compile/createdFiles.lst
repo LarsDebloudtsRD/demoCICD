@@ -1,0 +1,3 @@
+com\realdolmen\devops\whatisthedate\Application.class
+com\realdolmen\devops\whatisthedate\date\DateController.class
+com\realdolmen\devops\whatisthedate\config\ClockConfig.class
