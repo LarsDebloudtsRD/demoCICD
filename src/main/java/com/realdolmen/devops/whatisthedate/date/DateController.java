@@ -15,7 +15,7 @@ public class DateController {
 
     @GetMapping("/date")
     public String getUtcTime() {
-        return "time: " + clock.instant().toString();
+        return clock.instant().toString();
     }
     
 }
