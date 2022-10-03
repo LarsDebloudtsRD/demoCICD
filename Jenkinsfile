@@ -1,20 +1,23 @@
 pipeline {
-    agent any 
+    agent any
     tools{
-        maven: 'maven'
-        jdk: 'JDK8'
-    }
+        maven 'maven'
+        jdk 'JDK8'}
+
     stages {
-        stage('build') {
+        stage('Build') {
             steps {
-                echo 'bulding' 
+                echo 'Building..'
                 bat 'mvn clean'
+
             }
         }
-        stage('deploy') {
+
+        stage('Deploy') {
             steps {
-                echo 'deploy'
-                bat 'nvm install'
+                echo 'Deploying....'
+                bat 'mvn install'
+
             }
         }
     }
