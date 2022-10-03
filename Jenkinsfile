@@ -2,12 +2,19 @@ pipeline {
     agent any 
     tools {
         maven: 'maven'
-        jdk: 'jdk11'
+        jdk: 'JDK8'
     }
     stages {
-        stage('Stage 1') {
+        stage('build') {
             steps {
-                echo 'Hello world!!!!!!!' 
+                echo 'bulding' 
+                bat 'mvn clean'
+            }
+        }
+        stage('deploy') {
+            steps {
+                echo 'deploy'
+                bat 'nvm install'
             }
         }
     }
